@@ -1,6 +1,7 @@
 import java.sql.*;
 /*
-First attempt at java class for creating our Sudoku tables
+First attempt at java class for creating our Sudoku tables and populating them with the starting values
+Values used from this solved puzzle https://www.andrew.cmu.edu/user/kkuan/finalWriteup.html
 Last edited 11/14/17 by amy
 */
 
