@@ -2,11 +2,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import java.awt.event.KeyListener;
 
 public class SudokuGame{
 	SudokuDB SDB = new SudokuDB();						
 	SudokuGUI SGUID = new SudokuGUI();					
-	ButtonListener listener = new ButtonListener();		// Create BUTT Listener Object
+	ButtonListener listener = new ButtonListener();	// Create BUTT Listener Object
+	KeyListener listener = new KeyListener
 	
 	// Customer vars
 	//int CustomerCount;
@@ -18,9 +20,14 @@ public class SudokuGame{
 		new SalesExpress();
 	}
 	
-public SudokuExpress(){
-		
+public SudokuGame(){
 		SDB.connectDB();
 		SDB.createTables();
 		SGUID.ConstructGUI();
+		
+		
+		
+	SGUID.NewGameBut.addActionListener(listener);
+	
+		
 	}
