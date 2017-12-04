@@ -140,7 +140,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku Puzzle");
-		f.setSize(500,300);
+		f.setSize(800,600);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
@@ -182,7 +182,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(50, 50);
+			field.setSize(100, 100);
 			field.setFont(new Font("Times New Roman", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
