@@ -18,8 +18,17 @@ import java.sql.*;
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
 	// things in the class
-
+	// creates buttons
+	
+	int but_x_base = 450;
+	int but_y_pos = 450;
+	int but_width = 60;
+	int but_height = 40;
 	JButton bCheck = new JButton("Check");
+	JButton bNewGame = new JButton("New Game");
+		
+	
+	
 	
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
@@ -132,6 +141,26 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // needed for closing the process
 		f.setBackground(new Color(255,255,255));
 		f.setVisible(true);	
+		
+		
+		//Defines buttons
+		bCheck.setBounds(but_x_base + 0,but_y_pos + 80,but_width,but_height);
+		bNewGame.setBounds(but_x_base + 0,but_y_pos + 80,but_width,but_height);
+		ButtonListener listener = new ButtonListener();
+		
+		
+		// Adds button listeners
+		bCheck.addActionListener(listener);
+		bNewGame.addActionListener(listener);
+		
+		
+		//Adds buttons to Jframe
+		f.add(bCheck);
+		f.add(bNewGame);
+		
+		//Makes buttons visible
+		f.setVisible(true);
+		
 
 		// defines objects on the JFrame
 		JTextField[] allfields = {a1, a2, a3, a4, a5, a6, a7, a8, a9,
@@ -307,6 +336,14 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			}
 		  }
 		rs.close();		
+	}
+	
+	
+		class ButtonListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+		}
 	}
 	/*
 	//getting an error with this method...
