@@ -16,10 +16,8 @@ import java.util.Arrays;
 import java.sql.*;
 import java.awt.Color;
 import javax.swing.JTextField;
-<<<<<<< HEAD
 import javax.swing.text.PlainDocument;
-=======
->>>>>>> 5a8acd8cdbe245d644381ee42c5315df71a871aa
+
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
