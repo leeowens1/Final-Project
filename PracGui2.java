@@ -16,7 +16,10 @@ import java.util.Arrays;
 import java.sql.*;
 import java.awt.Color;
 import javax.swing.JTextField;
+<<<<<<< HEAD
 import javax.swing.text.PlainDocument;
+=======
+>>>>>>> 5a8acd8cdbe245d644381ee42c5315df71a871aa
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
@@ -139,7 +142,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku Puzzle");
-		f.setSize(1000,900);
+		f.setSize(500,300);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
@@ -189,7 +192,6 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
-			
 		}		
 	}
 
