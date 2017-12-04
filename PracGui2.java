@@ -22,8 +22,8 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	
 	int but_x_base = 450;
 	int but_y_pos = 450;
-	int but_width = 60;
-	int but_height = 40;
+	int but_width = 100;
+	int but_height = 50;
 	JButton bCheck = new JButton("Check");
 	JButton bNewGame = new JButton("New Game");
 		
@@ -144,8 +144,8 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		
 		
 		//Defines buttons
-		bCheck.setBounds(but_x_base + 0,but_y_pos + 80,but_width,but_height);
-		bNewGame.setBounds(but_x_base + 0,but_y_pos + 80,but_width,but_height);
+		bCheck.setBounds(but_x_base + 50,but_y_pos - 30,but_width,but_height);
+		bNewGame.setBounds(but_x_base + 150,but_y_pos - 30,but_width,but_height);
 		ButtonListener listener = new ButtonListener();
 		
 		
