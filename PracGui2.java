@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.sql.*;
 import java.awt.Color;
 import javax.swing.JTextField;
+import javax.swing.text.PlainDocument
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
@@ -188,6 +189,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
+			
 		}		
 	}
 
