@@ -139,7 +139,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		f.setSize(800,700);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // needed for closing the process
-		f.setBackground(Color.GREEN);
+		f.setBackground(Color.BLACK);
 		f.setVisible(true);	
 		
 		
