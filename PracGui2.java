@@ -138,7 +138,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku Puzzle");
-		f.setSize(800,700);
+		f.setSize(1000,900);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
