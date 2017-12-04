@@ -2,15 +2,15 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileNameExtensionFilterxtension;
 
 public class SudokuFrame {
 
-    private final JFrame frame = new JFrame("Sudoku");
-	    private SudokuFrame grid;
+    private final JFrame frame = new JFrame("Sudoku ");
+	    private SudokuGrid grid;
 
     public SudokuFrame() {
-        frame.getContentPane().add(grid = new SudokuFrame(9));
+        frame.getContentPane().add(grid = new SudokuGrid(9));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         buildMenu();
         frame.pack();
@@ -52,21 +52,21 @@ public class SudokuFrame {
 
         grid4.addActionListener((ActionEvent e) -> {
             frame.getContentPane().removeAll();
-            frame.getContentPane().add(grid = new SudokuFrame(4));
+            frame.getContentPane().add(grid = new SudokuGrid(4));
             frame.pack();
             centerView();
         });
 
         grid9.addActionListener((ActionEvent e) -> {
             frame.getContentPane().removeAll();
-            frame.getContentPane().add(grid = new SudokuFrame(9));
+            frame.getContentPane().add(grid = new SudokuGrid(9));
             frame.pack();
             centerView();
         });
 
         grid16.addActionListener((ActionEvent e) -> {
             frame.getContentPane().removeAll();
-            frame.getContentPane().add(grid = new SudokuFrame(16));
+            frame.getContentPane().add(grid = new SudokuGrid(16));
             frame.pack();
             centerView();
         });
