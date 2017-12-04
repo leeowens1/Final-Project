@@ -207,8 +207,8 @@ class JTextFieldLimit extends PlainDocument {
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(100, 100);
-			field.setFont(new Font("Times New Roman", Font.BOLD, 20));
+			field.setSize(200, 200);
+			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
 			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
