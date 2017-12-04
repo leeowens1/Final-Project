@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.sql.*;
+import java.awt.Color;
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
@@ -139,7 +140,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		f.setSize(800,700);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // needed for closing the process
-		f.setBackground(Color.BLACK);
+		f.setBackground(Color.GREEN);
 		f.setVisible(true);	
 		
 		
