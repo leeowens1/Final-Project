@@ -180,8 +180,8 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			y = (int) Math.floor(i/9);
 			field.setSize(50, 50);
 			field.setFont(new Font("Times New Roman", Font.BOLD, 15));
-			field.setBackground(new Color.Black)(220,220,220));
-			field.setForeground(new Color.White)(255, 255, 255));
+			field.setBackground(new Color.Black(220,220,220));
+			field.setForeground(new Color.White(255, 255, 255));
 			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
 			f.add(field);
 			i++;
