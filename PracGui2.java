@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.sql.*;
 import java.awt.Color;
+import javax.swing.JTextField;
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
