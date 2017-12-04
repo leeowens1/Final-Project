@@ -185,6 +185,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			field.setForeground(Color.WHITE);
 			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
 			f.add(field);
+			f.setHorizontalAlignment(JTextField.CENTER)
 			i++;
 		}		
 	}
