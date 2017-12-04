@@ -17,6 +17,8 @@ import java.sql.*;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.text.PlainDocument;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.AttributeSet;
 
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
@@ -136,6 +138,29 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 								{i1, i2, i3, i4, i5, i6, i7, i8, i9} };
 	
 	// constructor
+	
+class JTextFieldLimit extends PlainDocument {
+  private int limit;
+  JTextFieldLimit(int limit) {
+    super();
+    this.limit = limit;
+  }
+
+  JTextFieldLimit(int limit, boolean upper) {
+    super();
+    this.limit = limit;
+  }
+
+  public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
+    if (str == null)
+      return;
+
+    if ((getLength() + str.length()) <= limit) {
+      super.insertString(offset, str, attr);
+    }
+  }
+}
+
 	public PracGui2() {		
 	
 		// This defines the JFrame
@@ -190,8 +215,12 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
-		}		
+			field.setDocument(new JTextFieldLimit(1));
+		}
 	}
+	
+	
+	
 
 /* SQLITE STUFF
 */
