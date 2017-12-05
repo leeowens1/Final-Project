@@ -35,7 +35,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		
 	
 	
-	JTextField a0 = new JTextField();
+	JTextField Title = new JTextField("Sudoku");
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
 	JTextField a3 = new JTextField();
