@@ -26,16 +26,16 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	// things in the class
 	// creates buttons
 	
-	int but_x_base = 450;
-	int but_y_pos = 450;
-	int but_width = 100;
+	int but_x_base = 575;
+	int but_y_pos = 600;
+	int but_width = 200;
 	int but_height = 50;
 	JButton bCheck = new JButton("Check");
 	JButton bNewGame = new JButton("New Game");
 		
 	// text boxes for game data to be input//
 	
-	JTextField Title = new JTextField("Sudoku");
+	JTextField Title = new JTextField("Prepare for WOW!");
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
 	JTextField a3 = new JTextField();
@@ -165,7 +165,7 @@ class JTextFieldLimit extends PlainDocument {
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku");
-		f.setSize(1000,800);
+		f.setSize(750,850);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
@@ -173,8 +173,14 @@ class JTextFieldLimit extends PlainDocument {
 		
 		
 		//Defines buttons
-		bCheck.setBounds(but_x_base + 50,but_y_pos - 30,but_width,but_height);
-		bNewGame.setBounds(but_x_base + 150,but_y_pos - 30,but_width,but_height);
+		bCheck.setBounds(but_x_base - 250,but_y_pos + 150,but_width,but_height);
+		bCheck.setBackground(Color.BLACK);
+		bCheck.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
+		bCheck.setForeground(Color.WHITE);
+		bNewGame.setBounds(but_x_base - 450,but_y_pos + 150,but_width,but_height);
+		bNewGame.setBackground(Color.BLACK);
+		bNewGame.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
+		bNewGame.setForeground(Color.WHITE);
 		ButtonListener listener = new ButtonListener();
 		
 		
@@ -207,18 +213,24 @@ class JTextFieldLimit extends PlainDocument {
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(200, 200);
+			field.setSize(75, 75);
 			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
-			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
+			field.setBounds(20 + 75*x, 70 + 75*y, 75, 75);
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
 			field.setDocument(new JTextFieldLimit(1));
 		}
-	}
 	
+	  f.add(Title);
+          Title.setBounds(20,20,675,50);
+	  Title.setBackground(Color.BLACK);
+	  Title.setForeground(Color.CYAN);
+	  Title.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
+	  Title.setHorizontalAlignment(JTextField.CENTER);
+      }
 	
 	
 
