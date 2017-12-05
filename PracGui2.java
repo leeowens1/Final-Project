@@ -26,7 +26,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	// things in the class
 	// creates buttons
 	
-	int but_x_base = 550;
+	int but_x_base = 575;
 	int but_y_pos = 600;
 	int but_width = 200;
 	int but_height = 50;
@@ -165,7 +165,7 @@ class JTextFieldLimit extends PlainDocument {
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku");
-		f.setSize(600,750);
+		f.setSize(800,850);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
@@ -225,7 +225,7 @@ class JTextFieldLimit extends PlainDocument {
 		}
 	
 	  f.add(Title);
-          Title.setBounds(20,20,650,50);
+          Title.setBounds(20,20,675,50);
 	  Title.setBackground(Color.BLACK);
 	  Title.setForeground(Color.CYAN);
 	  Title.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
