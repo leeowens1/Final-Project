@@ -165,7 +165,7 @@ class JTextFieldLimit extends PlainDocument {
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku");
-		f.setSize(500,650);
+		f.setSize(600,750);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
@@ -213,11 +213,11 @@ class JTextFieldLimit extends PlainDocument {
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(200, 200);
+			field.setSize(150, 150);
 			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
-			field.setBounds(20 + 50*x, 70+50*y, 50, 50);
+			field.setBounds(20 + 50*x, 70+50*y, 150, 150);
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
