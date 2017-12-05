@@ -1,5 +1,5 @@
 # Final-Project
-Issues:
+Issues:  
 Limiting fields to one character (SOLVED)  
 Adding function to New Game/Check buttons (SOLVED)  
 Changing the color of the text (SOLVED)  
