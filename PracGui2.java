@@ -26,8 +26,8 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	// things in the class
 	// creates buttons
 	
-	int but_x_base = 450;
-	int but_y_pos = 450;
+	int but_x_base = 150;
+	int but_y_pos = 550;
 	int but_width = 200;
 	int but_height = 50;
 	JButton bCheck = new JButton("Check");
@@ -225,7 +225,7 @@ class JTextFieldLimit extends PlainDocument {
 		}
 	
 	  f.add(Title);
-          Title.setBounds(20,20,600,50);
+          Title.setBounds(20,20,650,50);
 	  Title.setBackground(Color.BLACK);
 	  Title.setForeground(Color.CYAN);
 	  Title.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
