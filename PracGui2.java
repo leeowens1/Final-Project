@@ -213,11 +213,11 @@ class JTextFieldLimit extends PlainDocument {
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(100, 100);
+			field.setSize(75, 75);
 			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
-			field.setBounds(20 + 100*x, 70 + 100*y, 100, 100);
+			field.setBounds(20 + 75*x, 70 + 75*y, 75, 75);
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
