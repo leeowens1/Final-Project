@@ -14,6 +14,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.sql.*;
+import java.awt.Color;
+import javax.swing.JTextField;
+import javax.swing.text.PlainDocument;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.AttributeSet;
+
 
 public class PracGui2 extends JFrame /*implements ActionListener */{
 
@@ -29,7 +35,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		
 	
 	
-	
+	JTextField a0 = new JTextField();
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
 	JTextField a3 = new JTextField();
@@ -132,14 +138,37 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 								{i1, i2, i3, i4, i5, i6, i7, i8, i9} };
 	
 	// constructor
+	
+class JTextFieldLimit extends PlainDocument {
+  private int limit;
+  JTextFieldLimit(int limit) {
+    super();
+    this.limit = limit;
+  }
+
+  JTextFieldLimit(int limit, boolean upper) {
+    super();
+    this.limit = limit;
+  }
+
+  public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
+    if (str == null)
+      return;
+
+    if ((getLength() + str.length()) <= limit) {
+      super.insertString(offset, str, attr);
+    }
+  }
+}
+
 	public PracGui2() {		
 	
 		// This defines the JFrame
-		JFrame f = new JFrame("Sudoku Puzzle");
-		f.setSize(800,700);
+		JFrame f = new JFrame("Sudoku");
+		f.setSize(1000,800);
 		f.setLayout(null);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // needed for closing the process
-		f.setBackground(Color.GREEN);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
+	    f.getContentPane().setBackground(Color.CYAN);
 		f.setVisible(true);	
 		
 		
@@ -178,15 +207,20 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		for(JTextField field : allfields) {
 			x = i%9;
 			y = (int) Math.floor(i/9);
-			field.setSize(50, 50);
-			field.setFont(new Font("Times New Roman", Font.BOLD, 20));
+			field.setSize(200, 200);
+			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
 			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
 			f.add(field);
+			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
-		}		
+			field.setDocument(new JTextFieldLimit(1));
+		}
 	}
+	
+	
+	
 
 /* SQLITE STUFF
 */
