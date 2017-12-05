@@ -173,11 +173,11 @@ class JTextFieldLimit extends PlainDocument {
 		
 		
 		//Defines buttons
-		bCheck.setBounds(but_x_base - 200,but_y_pos + 90,but_width,but_height);
+		bCheck.setBounds(but_x_base - 250,but_y_pos + 150,but_width,but_height);
 		bCheck.setBackground(Color.BLACK);
 		bCheck.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bCheck.setForeground(Color.WHITE);
-		bNewGame.setBounds(but_x_base - 400,but_y_pos + 90,but_width,but_height);
+		bNewGame.setBounds(but_x_base - 450,but_y_pos + 150,but_width,but_height);
 		bNewGame.setBackground(Color.BLACK);
 		bNewGame.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bNewGame.setForeground(Color.WHITE);
@@ -225,7 +225,7 @@ class JTextFieldLimit extends PlainDocument {
 		}
 	
 	  f.add(Title);
-          Title.setBounds(20,20,450,50);
+          Title.setBounds(20,20,600,50);
 	  Title.setBackground(Color.BLACK);
 	  Title.setForeground(Color.CYAN);
 	  Title.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
