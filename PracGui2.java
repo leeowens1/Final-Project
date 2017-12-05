@@ -26,7 +26,7 @@ public class PracGui2 extends JFrame {
 	// creates buttons
 	
 	int but_x_base = 575;
-	int but_y_pos = 600;
+	int but_y_pos = 715;
 	int but_width = 200;
 	int but_height = 50;
 	JButton bCheck = new JButton("Check");
@@ -164,7 +164,7 @@ public class PracGui2 extends JFrame {
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku");
-		f.setSize(750,850);
+		f.setSize(750,900);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    	f.getContentPane().setBackground(Color.CYAN);
