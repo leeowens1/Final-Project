@@ -35,7 +35,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 		
 	// text boxes for game data to be input//
 	
-	JTextField Title = new JTextField("Sudoku");
+	JTextField Title = new JTextField("Prepare for WOW!");
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
 	JTextField a3 = new JTextField();
