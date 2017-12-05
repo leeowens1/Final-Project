@@ -247,3 +247,19 @@ public class PracGui2 extends JFrame {
 				else if (e.getSource() == bCheck) {
 					if ( ob.checkData(stmt, "game1", box) == 2 ) {
 						// then user's input 
+					} else if ( ob.checkData(stmt, "game1", box) == 1) {
+						// then everything the user has entered so far is correct
+					} else if ( ob.checkData(stmt, "game1", box) == 0){
+						// then the user's input has some errors
+					}
+				}
+			}
+			catch ( Exception x ) {
+				System.err.println( x.getClass().getName() + ": " + x.getMessage() );
+				System.exit(0);
+			}	
+			
+		}
+	
+	}
+}
