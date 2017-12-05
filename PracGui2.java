@@ -211,14 +211,16 @@ class JTextFieldLimit extends PlainDocument {
 			field.setFont(new Font("Lucinda", Font.BOLD, 20));
 			field.setBackground(Color.BLACK);
 			field.setForeground(Color.WHITE);
-			field.setBounds(20 + 50*x, 20+50*y, 50, 50);
+			field.setBounds(20 + 50*x, 70+50*y, 50, 50);
 			f.add(field);
 			field.setHorizontalAlignment(JTextField.CENTER);
 			i++;
 			field.setDocument(new JTextFieldLimit(1));
 		}
-	}
 	
+	  f.add(Title);
+          Title.setBounds(20,20,50,450);
+      }
 	
 	
 
