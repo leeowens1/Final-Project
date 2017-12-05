@@ -167,21 +167,21 @@ public class PracGui2 extends JFrame {
 		f.setSize(750,850);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
-	    f.getContentPane().setBackground(Color.CYAN);
+	    	f.getContentPane().setBackground(Color.CYAN);
 		f.setVisible(true);	
-		
 		
 		//Defines buttons
 		bCheck.setBounds(but_x_base - 250,but_y_pos + 150,but_width,but_height);
 		bCheck.setBackground(Color.BLACK);
 		bCheck.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bCheck.setForeground(Color.WHITE);
+		bCheck.setBorder(BorderFactory.createLineBorder(Color.CYAN));
 		bNewGame.setBounds(but_x_base - 450,but_y_pos + 150,but_width,but_height);
 		bNewGame.setBackground(Color.BLACK);
 		bNewGame.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bNewGame.setForeground(Color.WHITE);
-		ButtonListener listener = new ButtonListener();
-		
+		bNewGame.setBorder(BorderFactory.createLineBorder(Color.CYAN));
+		ButtonListener listener = new ButtonListener();		
 		
 		// Adds button listeners
 		bCheck.addActionListener(listener);
@@ -195,25 +195,37 @@ public class PracGui2 extends JFrame {
 		//Makes buttons visible
 		f.setVisible(true);
 		
-		// set properties for the grid JTextFields		
+		// set properties for the grid JTextFields
+		int boxsize = 75;
+		int gap = 5;
+		int x = 0;
+		int y = 0;
+		
 		for(int i=0; i<9; i++) {
 		for(int j=0; j<9; j++) {
-			int boxsize = 75;
 			box[i][j].setSize(boxsize, boxsize);
 			box[i][j].setFont(new Font("Lucinda", Font.BOLD, 20));
 			box[i][j].setBackground(Color.BLACK);
 			box[i][j].setForeground(Color.WHITE);
-			box[i][j].setBounds(20 + boxsize*j, 70 + boxsize*i, boxsize, boxsize);
+			if ( (j == 0) | (j == 3) | (j == 6 ) ){
+				x = j / 3;
+			}
+			if ( (i == 3) | (i == 6 ) ) {
+				y = i / 3;
+			}
+			box[i][j].setBounds((20 + boxsize*j + gap*x), (70 + gap + boxsize*i + gap*y), boxsize, boxsize);
+			box[i][j].setBorder(BorderFactory.createLineBorder(Color.CYAN));
 			f.add(box[i][j]);
 			box[i][j].setHorizontalAlignment(JTextField.CENTER);
 			box[i][j].setDocument(new JTextFieldLimit(1));
 		}
 		}
-	
+		
 		f.add(Title);
-		Title.setBounds(20,20,675,50);
+		Title.setBounds(20,20,685,50);
 		Title.setBackground(Color.BLACK);
 		Title.setForeground(Color.CYAN);
+		Title.setBorder(BorderFactory.createEmptyBorder());
 		Title.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		Title.setHorizontalAlignment(JTextField.CENTER);
     }	  
