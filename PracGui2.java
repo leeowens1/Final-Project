@@ -6,7 +6,7 @@ Still need to run this file with java -classpath ".;sqlite-jdbc-[version].jar" P
 
 Prepare for WOW
 
-Last edited 12/04/2017
+Last edited 12/05/2017
 */
 
 import java.awt.*;
@@ -26,7 +26,7 @@ public class PracGui2 extends JFrame {
 	// creates buttons
 	
 	int but_x_base = 575;
-	int but_y_pos = 715;
+	int but_y_pos = 760;
 	int but_width = 200;
 	int but_height = 50;
 	JButton bCheck = new JButton("Check");
@@ -171,12 +171,12 @@ public class PracGui2 extends JFrame {
 		f.setVisible(true);	
 		
 		//Defines buttons
-		bCheck.setBounds(but_x_base - 250,but_y_pos + 150,but_width,but_height);
+		bCheck.setBounds(but_x_base - 250,but_y_pos,but_width,but_height);
 		bCheck.setBackground(Color.BLACK);
 		bCheck.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bCheck.setForeground(Color.WHITE);
 		bCheck.setBorder(BorderFactory.createLineBorder(Color.CYAN));
-		bNewGame.setBounds(but_x_base - 450,but_y_pos + 150,but_width,but_height);
+		bNewGame.setBounds(but_x_base - 450,but_y_pos,but_width,but_height);
 		bNewGame.setBackground(Color.BLACK);
 		bNewGame.setFont(new Font("Bradley Hand ITC",Font.BOLD,30));
 		bNewGame.setForeground(Color.WHITE);
@@ -246,20 +246,4 @@ public class PracGui2 extends JFrame {
 				} 
 				else if (e.getSource() == bCheck) {
 					if ( ob.checkData(stmt, "game1", box) == 2 ) {
-						// then user's input is completely correct!
-					} else if ( ob.checkData(stmt, "game1", box) == 1) {
-						// then everything the user has entered so far is correct
-					} else if ( ob.checkData(stmt, "game1", box) == 0){
-						// then the user's input has some errors
-					}
-				}
-			}
-			catch ( Exception x ) {
-				System.err.println( x.getClass().getName() + ": " + x.getMessage() );
-				System.exit(0);
-			}	
-			
-		}
-	
-	}
-}
+						// then user's input 
