@@ -33,9 +33,9 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	JButton bCheck = new JButton("Check");
 	JButton bNewGame = new JButton("New Game");
 		
+	// text boxes for game data to be input//
 	
-	
-	
+	JTextField Title = new JTextField("Sudoku");
 	JTextField a1 = new JTextField();
 	JTextField a2 = new JTextField();
 	JTextField a3 = new JTextField();
@@ -164,8 +164,8 @@ class JTextFieldLimit extends PlainDocument {
 	public PracGui2() {		
 	
 		// This defines the JFrame
-		JFrame f = new JFrame("Sudoku Puzzle");
-		f.setSize(800,600);
+		JFrame f = new JFrame("Sudoku");
+		f.setSize(1000,800);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
