@@ -26,8 +26,8 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	// things in the class
 	// creates buttons
 	
-	int but_x_base = 150;
-	int but_y_pos = 550;
+	int but_x_base = 350;
+	int but_y_pos = 600;
 	int but_width = 200;
 	int but_height = 50;
 	JButton bCheck = new JButton("Check");
