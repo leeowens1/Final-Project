@@ -14,3 +14,8 @@ Changing background/foreground colors (SOLVED)
 Getting correct sizes of boxes (SOLVED)  
 Getting program connected with SQLite (SOLVED)  
 
+# Program Files
+- batch file (runs the game)
+- GUI (creates the JFrame and contains the main method)
+- sqliteClass.java (contains sqlite CRUD functions)
+
