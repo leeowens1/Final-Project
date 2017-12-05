@@ -1,5 +1,5 @@
 /*
-	12/03/2017
+	Last edited 12/04/2017
 	
 	Table of Contents of Methods:
 	- Statement connectDB() // returns the stmt for running all the other methods
@@ -30,11 +30,8 @@ public class  sqliteClass extends JFrame {
 			Class.forName("org.sqlite.JDBC");
 			// creates a database named Sud1.db
 			c = DriverManager.getConnection("jdbc:sqlite:Sud1.db");
-			System.out.println("---Database is now open---");
 			
 			stmt = c.createStatement();			
-			//stmt.close();
-			//c.close();
 		}
 		catch ( Exception e ) {
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
@@ -73,19 +70,15 @@ public class  sqliteClass extends JFrame {
 			"col7	text, " +
 			"col8	text, " +
 			"col9	text)";
-			stmt.executeUpdate(sql);
-			System.out.println("---table " + tableName + " created!---");				
+			stmt.executeUpdate(sql);			
 	}
 	
 	void deleteData(Statement stmt, String tableName) throws SQLException {
-		String sql = " DELETE FROM " + tableName + ";"; // deletes all record from tableName
-		stmt.executeUpdate(sql);
-		
-		System.out.println("---all records from " + tableName + " deleted---");	
+		String sql = " DELETE FROM " + tableName + ";"; // deletes all records from tableName
+		stmt.executeUpdate(sql);	
 	}
 	
 	JTextField[][] setFields(Statement stmt, String tableName, JTextField[][] field) throws SQLException {
-		System.out.println("Setting the fields with fetchData");
 		String[][] box = fetchData(stmt, tableName);
 		String text;
 		for (int i=0; i<9; i++) {
@@ -109,8 +102,7 @@ public class  sqliteClass extends JFrame {
 	String[][] fetchData(Statement stmt, String tableName) throws SQLException {
 		String[][] box = new String[9][9];
 		ResultSet rs = stmt.executeQuery ( "SELECT * FROM " + tableName + ";");	
-		
-		System.out.println( "Data in " + tableName + " :");		
+				
 		System.out.println( "id\tcol1\tcol2\tcol3\tcol4\tcol5\tcol6\tcol7\tcol8\tcol9" );
 		
 		while ( rs.next() ) {
@@ -230,9 +222,7 @@ public class  sqliteClass extends JFrame {
 			String sql = "INSERT INTO game2 (id, col1, col2, col3, col4, col5, col6, col7, col8, col9) " +
 			"VALUES (1, '', '9', '', '', '', '4', '3', '', '');";
 			stmt.executeUpdate(sql);		
-		}
-		
-		System.out.println("---" + tableName + " values added!---");		
+		}		
 	}
 	
 	void addAnswer(Statement stmt, String answer) throws SQLException {
@@ -279,8 +269,7 @@ public class  sqliteClass extends JFrame {
 			String sql = "INSERT INTO answer2 (id, col1, col2, col3, col4, col5, col6, col7, col8, col9) " +
 			"VALUES (1, '', '9', '', '', '', '4', '3', '', '');";
 			stmt.executeUpdate(sql);
-		}
-		System.out.println("---" + answer + " values added---");	
+		}	
 	}
 
 }
