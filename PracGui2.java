@@ -165,7 +165,7 @@ class JTextFieldLimit extends PlainDocument {
 	
 		// This defines the JFrame
 		JFrame f = new JFrame("Sudoku");
-		f.setSize(800,850);
+		f.setSize(750,850);
 		f.setLayout(null);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // needed for closing the process
 	    f.getContentPane().setBackground(Color.CYAN);
