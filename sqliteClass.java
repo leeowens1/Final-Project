@@ -6,12 +6,12 @@
 	- startGame(Statement stmt, String game, JTextField[][] box) // game must be "game1" or "game2"
 	- createTable(Statement stmt, String tableName) // creates an sqlite table
 	- deleteData(Statement stmt, String tableName) // deletes all the data, in case it already existed, clean state
-	- setFields(String stmt, String game, JTextField[][] field, boolean original) // returns JTextFields with current info
+	- setFields(String stmt, String game, JTextField[][] field) // returns JTextFields with current info
 	- updateData(Statement stmt, String game, int id, int column, String value) // enters updated values into the game table
 	- checkData(Statement stmt, String game, JTextField[][] test) // checks user's values
 		// Enters correct values into game table, enters "X" for incorrect values
 		// returns 0 if any mistakes, 1 if correct so far, and 2 if completely correct puzzle
-	- fetchData(Statement stmt, String tableName) // returns a String array with all of the values in the table
+	- fetchData(Statement stmt, String tableName) // returns a String array with all of the values in the table			
 	- addGame(Statement stmt, String tableName) // inputs the data into "game1" or "game2"
 	- addAnswer(Statement stmt, String answer) // inputs the data into "answer1" or "answer2"	
 */
@@ -54,7 +54,7 @@ public class  sqliteClass extends JFrame {
 		createTable(stmt, game);
 		deleteData(stmt, game); // in case the table and data already exists
 		addGame(stmt, game);
-		setFields(stmt, game, box, true);
+		setFields(stmt, game, box);
 		
 		createTable(stmt, answer);
 		deleteData(stmt, answer);
@@ -84,15 +84,19 @@ public class  sqliteClass extends JFrame {
 		System.out.println("---all records from " + tableName + " deleted---");	
 	}
 	
-	JTextField[][] setFields(Statement stmt, String tableName, JTextField[][] field, boolean original) throws SQLException {
+	JTextField[][] setFields(Statement stmt, String tableName, JTextField[][] field) throws SQLException {
 		System.out.println("Setting the fields with fetchData");
 		String[][] box = fetchData(stmt, tableName);
+		String text;
 		for (int i=0; i<9; i++) {
 		for (int j=0; j<9; j++) {
+			text = field[i][j].getText();
+			if ( box[i][j].equals("") | box[i][j].equals("X") ) {
+				field[i][j].setForeground(Color.CYAN);
+			}
 			field[i][j].setText(box[i][j]);
 		}
 		}
-		
 		return field;
 	}
 	
@@ -173,7 +177,7 @@ public class  sqliteClass extends JFrame {
 		}
 		}
 		
-		setFields(stmt, game, test, true);
+		setFields(stmt, game, test);
 
 		if (correct) {
 			return returnval; // if correct, returns either 2 for completely correct, or 1 for correct so far
