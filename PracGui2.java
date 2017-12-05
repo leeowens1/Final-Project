@@ -33,7 +33,7 @@ public class PracGui2 extends JFrame /*implements ActionListener */{
 	JButton bCheck = new JButton("Check");
 	JButton bNewGame = new JButton("New Game");
 		
-	
+	// text boxes for game data to be input//
 	
 	JTextField Title = new JTextField("Sudoku");
 	JTextField a1 = new JTextField();
